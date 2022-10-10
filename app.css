@@ -14,24 +14,50 @@ body{
     height: 95vh;
     width: 95vw;
     display: grid;
-    grid-template-rows: 30px;
+    grid-template-rows: 30px 1fr 1fr 1fr;
+    grid-template-columns: repeat(4,1fr);
     grid-template-areas: 
         "one two three four"
         "five five five six"
         "five five five seven"
         "eight nine ten eleven"
     ;
-    
-    gap: 8px;
+    gap: 5px;
 }
-.content div{
+
+.box-shadow{
     box-shadow: 1px 3px 15px #888888;
     background-color: white;
 }
 
+.titles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 
-.item{
-    /* border: 2px solid red; */
+.subContent button{
+    padding: 10px 25px;
+    color: white;
+    font-weight: 600;
+    background-color: #4E4D4D;
+    border: none;
+}
+
+.bold{
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.semi-bold{
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .one {
@@ -47,9 +73,17 @@ body{
     grid-area: four;
 }
 .five {
+    /* background-image: url("https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
+    background-position: center;
+    background-size: 100% 100%;
     grid-area: five;
     width: 90%;
 }
+.five img{
+    width: 100%;
+    height: 100%;
+}
+
 .six {
     grid-area: six;
 }
@@ -70,26 +104,45 @@ body{
 }
 
 @media screen and (max-width: 767px) {
+   body{
+    width: 90vw;
+   }
 
-    body{
+   .content{
+    margin: 10px;
+    display: flex;
+    width: 95vw;
+    flex-direction: column;
+    align-content: center;
+  }
 
-    }
+   .titles{
+    font-size: 14px;
+    padding: 5px 0px;
+   }
 
+    .four{
+    color: white;
+    background-color: #4E4D4D;
+   }
 
-
-    .content{
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        border: 2px solid palegreen;
-    }
-    .titles{
-        height: 20px;
-    }
-    .mobile{
-        flex: 1;
-    }
-
-    
+  .five{
+    width: 100%;
+  }
+  .mobile{
+    padding: 10px;
+  }
+  .mobile button{
+    padding: 2px 5px;
+    font-size: 13px;
+  }
+  .mobile p{
+    font-size: 11px;
+  }
+  .bold{
+    font-size: 13px;
+  }
+  .semi-bold{
+    font-size: 12px;
+  }
 }
