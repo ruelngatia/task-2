@@ -142,6 +142,7 @@ body{
    }
 
    .content{
+    display: none;
     margin: 10px;
     display: flex;
     width: 95vw;
@@ -155,6 +156,7 @@ body{
    }
 
     .four{
+        
     color: white;
     background-color: #4E4D4D;
    }
@@ -165,11 +167,15 @@ body{
     padding: 30px 10px;
   }
   .mobile{
-    padding: 10px;
+    padding:  30px 10px;
+    min-height:180px;
   }
   .mobile button{
     padding: 2px 5px;
     font-size: 13px;
+  }
+  .subContent{
+    gap: 10px;
   }
   .mobile p{
     font-size: 11px;
